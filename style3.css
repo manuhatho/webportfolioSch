@@ -134,7 +134,7 @@ header nav ul li a:hover{
     display: block;
     height: 3px;
     width: 100%;
-    background-color: rgb(245, 35, 98);
+    background-color: rgb(0, 0, 0);
     border-radius: 2px;
     margin-bottom: 6px;
     transition: 0.4s;
@@ -144,7 +144,7 @@ header nav ul li a:hover{
     display: block;
     height: 3px;
     width: 100%;
-    background-color: rgb(20, 172, 231);
+    background-color: rgb(0, 0, 0);
     border-radius: 2px;
     /* margin-top: 6px; */
     transition: 0.4s;
@@ -157,6 +157,7 @@ header nav ul li a:hover{
     border-radius: 2px;
     margin-bottom: 6px;
     transition: 0.4s;
+    margin-left: 6px;
     z-index:99;
 }
 
@@ -532,7 +533,7 @@ footer .right .location {
 
  
    
-
+   
     header {
         display: flex;
         gap: 5px;
@@ -894,9 +895,56 @@ footer .right .location {
 
 /* PAGE DG ------------------------------------------------------------- */
 
+.header h1 a {
+    color: white !important;
+   }
 .header font{
     color: rgb(255, 0, 55);
     text-transform: none;
+}
+
+
+.arrow{
+    width: 35px;
+    height: 45px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    scale: 0.8;
+    background-color: rgb(146, 145, 145);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+    display: none;
+    transition: 0.25s;
+    
+   
+}
+.arrow:hover {
+    scale: 1;
+}
+.arrow .top, .arrow::before, .arrow::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: rgb(245, 35, 98);
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.arrow .top {
+    transform: rotate(90deg);
+    border-radius: 0 40px 40px 0;
+} 
+
+.arrow::before {
+    transform: rotate(45deg) translate(9px, -6px);
+    border-radius: 0 40px 40px 0;
+}
+ .arrow::after {
+    transform: rotate(-45deg) translate(5px, -20px);
+    border-radius:  40px 0 0 40px
 }
 
 .header {
@@ -1146,7 +1194,7 @@ footer .right .location {
     .header{
         margin-left: 5px;
     }
-   .hero-Page .content img{
+   .gallery-1 img{
         height: 200px;
        
     }
@@ -1174,15 +1222,11 @@ footer .right .location {
   
    overflow-X: hidden;
 }
-.hero-Page .content img{
+.gallery-1 img{
     height: 100px;
    
-}
+ }
 
-.hero-Page .content img{
-    height: 100px;
-   
-}
 }
 /* PAGE Wd------------------------------------------------------------ */
 
