@@ -39,7 +39,14 @@ body::-webkit-scrollbar{
         }
 
 
-
+#preloader {
+    background: black url(./giphy.gif) no-repeat center center;
+    background-size: 40%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 
 main {
     width: 100%;
@@ -47,6 +54,10 @@ main {
     height: 100%;
     margin: 0 auto;
     
+}
+
+.no-select {
+user-select:none;
 }
 
 header {
@@ -67,22 +78,14 @@ header {
     align-items: center;
 
 }
-header .logo{
-    font-family: "cake";
-    font-size: 2.5rem;
-    padding: 10px;
-    z-index: 99;
-    
-}
+
 
 .no-select {
     user-select: none;
 }
-header .logo, .fo{
-    color: black;
-}
-header .logo .red{
-    color: rgb(245, 35, 98);
+header img {
+    height: 50px;
+    z-index: 99;
 }
 
 
@@ -188,8 +191,6 @@ header nav ul li a:hover{
 .heroContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 50px;
 }
 
@@ -240,7 +241,7 @@ header nav ul li a:hover{
     font-size: 20px;
     padding: 12px 30px;
     border-radius: 40px;
-    background-color: rgb(198, 35, 84);
+    background-color: rgb(176, 7, 58);
     border: none;
     color: rgb(255, 255, 255);
     transition: 0.25s;
@@ -248,8 +249,9 @@ header nav ul li a:hover{
 }
 
 .btn button:hover {
-    background-color: rgb(255, 6, 81);
+    background-color:  rgb(255, 0, 76);
     scale:1.2;
+
 
 } 
 
@@ -257,23 +259,22 @@ header nav ul li a:hover{
     display: none;
 }
 
-.footer.footer-toggle{
+ .footer.footer-toggle {
     opacity: 1;
     transform: translateY(0);
+   
 }
 
 
 .footer {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.863);
+    background-color: rgb(0, 0, 0);
     font-family: "caviar";
     font-weight: 800;
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    border: 10px solid;
-    border-bottom: none;
-    border-image: linear-gradient(45deg, rgba(3, 255, 255, 0.753)0%, rgba(255, 96, 141, 0.855) 51%, rgb(246, 148, 246)100%)1;
+    /* border-image: linear-gradient(45deg, rgba(3, 255, 255, 0.753)0%, rgba(255, 96, 141, 0.855) 51%, rgb(246, 148, 246)100%)1; */
     opacity: 0 ;
     position: fixed;
     bottom: 0;
@@ -285,11 +286,18 @@ header nav ul li a:hover{
     
 }
 
-footer {
-    width: 100%;
-    max-width: 90%;
-     margin: 0 auto; 
+
+  
+
+footer.footer-toggle {
+    height: 100%;
+  
     
+    
+}
+footer {
+    height: 0;
+  transition: 0.4s;
 }
 
 
@@ -297,10 +305,10 @@ footer {
 footer .content {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    padding: 20px 0;
+    /* gap: 30px; */
+    padding: 0 25px;
    
 
 }
@@ -327,27 +335,31 @@ footer .right {
     margin-top: 30px;
 }
 
+
+
+
+
 footer .right .location {
-   margin-left: 29px;
-}
-
-.fa-brands {
-    color: white;
-    scale: 1.2;
-    margin: 0 5px;
-}
-.fa-location-dot{
-    color: white;
-    position: relative;
-    bottom: 27px;
-    margin-left: 22px;
-    scale: 1.2;
-}
-
-.fa-download{
-    color: rgb(0, 0, 0) ;
-
-}
+    /* margin-left: 29px; */
+ }
+ 
+ .fa-brands {
+     color: white;
+     scale: 0.9;
+     margin: 0 5px;
+ }
+ .fa-location-dot{
+     color: white;
+     position: relative;
+     bottom: 27px;
+    right: 25px;
+     scale: 0.9;
+ }
+ 
+ .fa-download{
+     color: rgb(0, 0, 0) ;
+ 
+ }
 
 
 
@@ -501,8 +513,9 @@ footer .right .location {
     display: flex!important;
     justify-content: center;
     align-items: center;
+  
 
-    /* margin-right:43px ; */
+
 
     
 }
@@ -516,12 +529,13 @@ footer .right .location {
     border: none;
     color: white;
     transition: 0.25s;
+   
     
 }
 
 .btn2 button:hover {
-    background-color: rgb(255, 6, 81);
-    /* scale:1.2; */
+    background-color: rgb(160, 0, 48);
+    scale: 1.2;
 
 } 
 
@@ -546,6 +560,12 @@ footer .right .location {
     footer h2, p {
         font-size: 18px ;
     }
+
+    .heroContainer .right{
+        margin-top: 35px;
+    }
+
+
 
 }
 /* md */
@@ -578,7 +598,10 @@ footer .right .location {
     }
 
     footer h2, p {
-        font-size: 16px ;
+        font-size: 14px ;
+    }
+    footer .content {
+        padding: 0;
     }
 
    
@@ -621,7 +644,7 @@ footer .right .location {
         font-family: "cabinet";
         font-size: 19px;
         display: block;
-        background-color: rgba(25, 55, 89, 0.871);
+        background-color: rgb(255, 255, 255);
         height: 100%;
         width: 100%;
         position: fixed;
@@ -641,7 +664,7 @@ footer .right .location {
     .nav2 a {
         display: block;
         color: rgb(255, 255, 255);
-        background-color: rgba(25, 55, 89, 0.871);
+        background-color: rgb(198, 35, 84);
         border-radius: 0 30px 30px 30px;
         padding: 15px;
         width:100%;
@@ -653,6 +676,9 @@ footer .right .location {
     
     .nav2 a:hover {
         background-color:rgb(255, 6, 81);
+    }
+    .fa-location-dot{
+        /* bottom: 35px; */
     }
 }
 @media (max-width:475px){
@@ -682,6 +708,9 @@ footer .right .location {
     footer h2, p {
         font-size: 12px ;
     }
+    .fa-location-dot{
+        bottom: 28px;
+    }
 }    
 @media (max-width:400px){
 
@@ -694,11 +723,22 @@ footer .right .location {
     footer h2, p {
         font-size: 10px ;
     }
-     
+     footer .location {
+        text-align: center;
+     }
+     .fa-location-dot{
+        margin-left: 5px;
+     }
 
 
 }
 
+@media (max-width:328px){
+    .fa-location-dot{
+        margin-left: 28px;
+     }
+
+}
 @media (max-width:300px){
   
 
@@ -708,16 +748,20 @@ footer .right .location {
     }
 
     footer h2, p {
-        font-size: 5px ;
+        font-size: 8px ;
+    }
+    .fa-location-dot, .fa-brands{
+        scale: 0.6;
+        margin: 0;
+    }
+    .fa-location-dot{
+       bottom: 18px;
+      
     }
        
     
         
     }
-
-
-
-
 
 
 
@@ -731,7 +775,7 @@ footer .right .location {
     max-width: 360px;
     margin-top: 80px !important;
     margin: 0 auto;
-    padding: 12px 0;
+    /* padding: 12px 0; */
     border-radius: 0 40px 40px;
     border: none;
     
@@ -741,7 +785,7 @@ footer .right .location {
     padding: 10px 0;
     color: rgb(255, 255, 255);
     font-family: "caviar";
-    font-size: 25px;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -907,8 +951,7 @@ footer .right .location {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    scale: 0.8;
-    background-color: rgb(146, 145, 145);
+    scale: 0.7;
     border-radius: 50px;
     cursor: pointer;
     margin-bottom: 100px;
@@ -972,7 +1015,7 @@ footer .right .location {
     max-width: 90%;
    display: flex;
    flex-wrap: wrap;
-   gap: 60px;
+   gap: 30px;
    align-items: center;
    justify-content: center;
 }
@@ -983,9 +1026,9 @@ footer .right .location {
    height: 300px;
    object-fit: cover;
    border-radius: 8px;
-   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.494);
+
    transition: 0.25s ;
-   border: 1px solid black;
+
 }
 .gallery-1 img:hover{
     box-shadow: 1px 1px 10px 5px rgb(255, 255, 255);
@@ -1011,6 +1054,7 @@ footer .right .location {
     box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.26);
     border-radius: 40px;
     transition: 0.25s ease-in-out;
+    margin-top: 20px;
 }
 
 .gallery-1::after {
